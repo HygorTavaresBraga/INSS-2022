@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #cecece;
+}
+
+.container{
+    background-color: rgb(13, 13, 78);
+    width: auto; height: 50px;
+}
+
+.container ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 35px;
+    height: 50px;
+}
+
+.container li, a{
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.container a:hover{
+    text-decoration: underline;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: rgb(48, 48, 48);
+    text-align: center;
+    margin: 20px 0 20px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+main .container{
+    background-color: #cecece;
+    width: 100%; height: auto;
+    text-align: center;
+}
+
+form{
+    width: 50%;
+    border: 1px solid gray;
+    margin: 0 auto 0 auto;
+    padding: 15px 0 15px;
+}
+
+form button{
+    border: 10px rgb(13, 13, 78);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px;
+    text-transform: uppercase;
+    padding: 3px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+form button:hover{
+    color: white;
+    background-color: rgb(48, 48, 48);
+}
+
+main label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main .container span{
+    color: gray;
+    
+}
+
+footer{
+    background-color: rgb(48, 48, 48);
+    color: rgb(243, 243, 243);
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 1px 1px 1px 1px gray;
+}

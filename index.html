@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cálculo do INSS (2022)</title>
+        <link rel="icon" href="inss.ico">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script>
+            function calcularINSS() {
+                var salario = document.getElementById('salario').value;
+                var calculo;
+                var valorFinal;
+
+                //SALÁRIO DE R$1.212 PARA BAIXO
+                if (salario <= 1212) {
+                        valorFinal = salario * (7.5/100);
+                        document.getElementById('resultado').value = valorFinal;
+                }
+
+                //SALÁRIO ENTRE R$1.213 E R$2.427
+                if(salario >= 1213 && salario <= 2427) {
+                        calculo = (salario - 1212) * (9/100);
+                        valorFinal = 90.90 + calculo;
+                        document.getElementById('resultado').value = valorFinal;
+                }
+
+                //SALÁRIO ENTRE R$2.428 E R$3.641
+                if(salario >= 2428 && salario <= 3641) {
+                        calculo = (salario - 2427) * (12/100);
+                        valorFinal = 90.90 + 109.38 + calculo;
+                        document.getElementById('resultado').value = valorFinal;
+                }
+
+                //SALÁRIO ENTRE R$3.641 E R$7.087
+                if(salario >= 3642 && salario <= 7087) {
+                        calculo = (salario - 3641) * (14/100);
+                        valorFinal = 90.90 + 109.38 + 145.64 + calculo;
+                        document.getElementById('resultado').value = valorFinal;
+                }
+
+                //ACIMA DE R$7.087
+                if(salario >= 7088) {
+                        valorFinal = 828.39;
+                        document.getElementById('resultado').value = valorFinal;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li>
+                        <a href="#">Calcular INSS (2022)</a> 
+                        </li>
+                        <li>
+                        <a href="#">EM BREVE</a> 
+                        </li>
+                        <li>
+                        <a href="#">EM BREVE</a> 
+                        </li>
+                        <li>
+                        <a href="#">EM BREVE</a> 
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <h1>Cálculo do INSS (2022)</h1>
+                <div class="container">
+                    <form action="">
+                        <label for="">Salário</label>
+                            <br>
+                        <input type="text" id="salario" placeholder="Digite seu Salário">
+                            <br>
+                        <span>Apenas números.</span>
+                            <br><br>
+                        <button type="submit" onclick="calcularINSS(); return false;">Calcular</button>
+                            <br><br><br>
+                        <label for="">Resultado</label>
+                            <br>
+                        <input type="text" disabled id="resultado">
+                    </form>
+                </div>
+        </main>
+
+        <footer>
+            <span>Created by Hygor T. Braga</span>
+        </footer>
+    </body>
+</html>
